@@ -1,0 +1,171 @@
+/*
+   ___    __           __                _   
+  / __|  /_/   _ _    /_/   _ _   __ _  | |  
+ | (_ | / -_) | ' \  / -_) | '_| / _` | | |  
+  \___| \___| |_||_| \___| |_|   \__,_| |_|  
+                                             
+*/
+/* On s'assure que tous les éléments html soient border-box */
+html, *{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Déclaration de la police */
+@font-face {
+font-family: 'Bernina';
+src: url('../fonts/BerninaSans-Web-CondensedBold.woff2');
+}
+
+@font-face {
+font-family: 'GothamHTF';
+src: url('../fonts/GothamHTF-Book.ttf');
+}
+
+
+/*
+  __  __          _        
+ |  \/  |  __ _  (_)  _ _  
+ | |\/| | / _` | | | | ' \ 
+ |_|  |_| \__,_| |_| |_||_|
+                           
+*/
+main{
+	display: flex;
+	flex-direction: column;
+}
+
+p, h1{
+	font-family: 'Bernina';
+	color: #00465b;
+	text-align: center;
+	margin-bottom: 8%;
+}
+
+h1{
+	font-size: 2em;
+	font-weight: lighter;
+}
+
+section:first-child img{
+	width: 100%;
+	position: relative;
+}
+.red{
+	background: red;
+	position: absolute;
+	top:50px;
+	right: 50px;
+	width: 30%;
+	font-size: 1rem;
+	border-radius: 5px;
+}
+.red div{
+	font-size: 0.5em;
+}
+aside{
+	background: rgba(10, 17, 23, 0.15);
+}
+aside p{
+	text-align: inherit;
+	padding-left: 20px ;
+	margin:0; 
+	color: white;
+	font-size: 0.5em;
+} 
+button{
+	border-radius: 5px;
+	background: inherit;
+	border: 1px solid gray;
+	font-family: 'Bernina';
+	color: #00465b;
+}
+
+section:last-child img+p{
+	text-transform: uppercase;
+	font-family: 'GothamHTF';
+}
+
+section:last-child div:last-child img{
+	border-radius: 50%;
+	width: 50%;
+}
+span img{
+
+}
+
+
+@media all and (max-width: 480px){
+	.logobtn{
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+	.img{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.img div{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+}
+
+
+@media all and (min-width: 480px) and (max-width: 768px){
+	.logobtn{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.img{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.img div{
+		width: 50%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	.cryo{
+		order: 1;
+	}
+
+}
+
+@media all and (min-width: 768px){
+	section:last-child{
+		margin: 0 15%;
+	}
+	.logobtn{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.img{
+		display: flex;
+	}
+	.img div{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	.cryo{
+		order: 1;
+	}
+	aside{
+		display: flex;
+	}
+	aside p {
+		padding-left: 0 ;
+	}
+	span{
+		display: flex;
+		justify-content: flex-end;
+	}
+
+}
